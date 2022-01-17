@@ -25,8 +25,6 @@ namespace DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<ScheduleTable> ScheduleTables { get; set; }
-        public virtual DbSet<SystemTable> SystemTables { get; set; }
+        public virtual DbSet<Interrupt> Interrupts { get; set; }
     }
 }

@@ -12,11 +12,13 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class C__MigrationHistory
+    public partial class Interrupt
     {
-        public string MigrationId { get; set; }
-        public string ContextKey { get; set; }
-        public byte[] Model { get; set; }
-        public string ProductVersion { get; set; }
+        public int Id { get; set; }
+        public int workNo { get; set; }
+        public System.DateTime Start { get; set; }
+        public System.DateTime Stop { get; set; }
+        public string Stats { get; set; }
+        public string Reason { get; set; }
     }
 }

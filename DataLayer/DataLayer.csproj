@@ -51,11 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
-    <Compile Include="DataClass\SystemTableRepository.cs" />
-    <Compile Include="Interfaces\IScheduleTablesRepository.cs" />
-    <Compile Include="Interfaces\ISystemTableRepository.cs" />
-    <Compile Include="DataClass\ScheduleTablesRepository.cs" />
-    <Compile Include="C__MigrationHistory.cs">
+    <Compile Include="DataClass\InterruptsRepository.cs" />
+    <Compile Include="Interfaces\IInterruptsRepository.cs" />
+    <Compile Include="Interrupt.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model.Context.cs">
@@ -74,12 +72,6 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScheduleTable.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SystemTable.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model.edmx">

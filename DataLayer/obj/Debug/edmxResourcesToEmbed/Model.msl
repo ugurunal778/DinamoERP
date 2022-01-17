@@ -1,35 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DinamoERPdbModelStoreContainer" CdmEntityContainer="DinamoERPdbEntities">
-    <EntitySetMapping Name="C__MigrationHistory">
-      <EntityTypeMapping TypeName="DinamoERPdbModel.C__MigrationHistory">
-        <MappingFragment StoreEntitySet="__MigrationHistory">
-          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
-          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
-          <ScalarProperty Name="Model" ColumnName="Model" />
-          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ScheduleTables">
-      <EntityTypeMapping TypeName="DinamoERPdbModel.ScheduleTable">
-        <MappingFragment StoreEntitySet="ScheduleTables">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Start" ColumnName="Start" />
-          <ScalarProperty Name="Stop" ColumnName="Stop" />
+    <EntitySetMapping Name="Interrupts">
+      <EntityTypeMapping TypeName="DinamoERPdbModel.Interrupt">
+        <MappingFragment StoreEntitySet="Interrupts">
           <ScalarProperty Name="Reason" ColumnName="Reason" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SystemTables">
-      <EntityTypeMapping TypeName="DinamoERPdbModel.SystemTable">
-        <MappingFragment StoreEntitySet="SystemTables">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="workNo" ColumnName="workNo" />
-          <ScalarProperty Name="Start" ColumnName="Start" />
-          <ScalarProperty Name="Stop" ColumnName="Stop" />
           <ScalarProperty Name="Stats" ColumnName="Stats" />
-          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Stop" ColumnName="Stop" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="workNo" ColumnName="workNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace DataLayer.DataClass
 {
-    public class SystemTableRepository : BaseRepository, ISystemTableRepository
+    public class InterruptsRepository : BaseRepository, IInterruptsRepository
     {
         public KeyValuePair<bool, string> Delete(int id)
         {
             var result = new KeyValuePair<bool, string>(true, "işlem başarılı");
             try
             {
-                var table = DinamoERPModel.SystemTables.FirstOrDefault(x => x.Id == id);
+                var table = DinamoERPModel.Interrupts.FirstOrDefault(x => x.Id == id);
                 if (table == null)
                 {
                     result = new KeyValuePair<bool, string>(false, "Kayıt bulunamadı");
                 }
                 else
                 {
-                    DinamoERPModel.SystemTables.Remove(table);
+                    DinamoERPModel.Interrupts.Remove(table);
                     DinamoERPModel.SaveChanges();
                 }
             }
@@ -31,27 +31,27 @@ namespace DataLayer.DataClass
             }
             return result;
         }
-        public SystemTable GetById(int id)
+        public Interrupt GetById(int id)
         {
-            var table = DinamoERPModel.SystemTables.FirstOrDefault(x => x.Id == id);
+            var table = DinamoERPModel.Interrupts.FirstOrDefault(x => x.Id == id);
             return table;
         }
-        public IList<SystemTable> GetAll()
+        public IList<Interrupt> GetAll()
         {
-            var table = DinamoERPModel.SystemTables.ToList();
+            var table = DinamoERPModel.Interrupts.ToList();
             return table;
         }
-        public IList<SystemTable> GetByStats(string stats)
+        public IList<Interrupt> GetByStats(string stats)
         {
-            var table = DinamoERPModel.SystemTables.Where(x => x.Stats.Contains(stats)).ToList();
+            var table = DinamoERPModel.Interrupts.Where(x => x.Stats.Contains(stats)).ToList();
             return table;
         }
-        public KeyValuePair<bool, string> Create(SystemTable stats)
+        public KeyValuePair<bool, string> Create(Interrupt stats)
         {
             var result = new KeyValuePair<bool, string>(true, "İşlem Başarılı");
             try
             {
-                DinamoERPModel.SystemTables.Add(stats);
+                DinamoERPModel.Interrupts.Add(stats);
                 DinamoERPModel.SaveChanges();
             }
             catch (Exception ex)
@@ -60,7 +60,7 @@ namespace DataLayer.DataClass
             }
             return result;
         }
-        public KeyValuePair<bool, string> Update(SystemTable stats)
+        public KeyValuePair<bool, string> Update(Interrupt stats)
         {
             var result = new KeyValuePair<bool, string>(true, "İşlem Başarılı");
             try

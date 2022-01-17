@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    partial class SystemTableBusinessLayer
+    partial class InterruptsBusinessLayer
     {
-        private KeyValuePair<bool, string> GetCreateValidationResult(SystemTableDto systemTableDto)
+        private KeyValuePair<bool, string> GetCreateValidationResult(InterruptsDto interruptsDto)
         {
             throw new NotImplementedException();
         }

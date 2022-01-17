@@ -1,25 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DinamoERPdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="__MigrationHistory">
-    <Key>
-      <PropertyRef Name="MigrationId" />
-      <PropertyRef Name="ContextKey" />
-    </Key>
-    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
-    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
-    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
-    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ScheduleTables">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Start" Type="datetime" Nullable="false" />
-    <Property Name="Stop" Type="datetime" Nullable="false" />
-    <Property Name="Reason" Type="nvarchar(max)" />
-  </EntityType>
-  <EntityType Name="SystemTables">
+  <EntityType Name="Interrupts">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -31,8 +12,6 @@
     <Property Name="Reason" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="DinamoERPdbModelStoreContainer">
-    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ScheduleTables" EntityType="Self.ScheduleTables" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="SystemTables" EntityType="Self.SystemTables" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Interrupts" EntityType="Self.Interrupts" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

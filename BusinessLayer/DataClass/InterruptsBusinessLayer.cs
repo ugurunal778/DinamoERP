@@ -2,22 +2,22 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using AutoMapper;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public partial class SystemTableBusinessLayer : BaseBusinessLayer, ISystemTableBusinessLayer
+    public partial class InterruptsBusinessLayer : BaseBusinessLayer, IInterruptsBusinessLayer
     {
-        public KeyValuePair<bool, string> Create(SystemTableDto systemTableDto)
+        public KeyValuePair<bool, string> Create(InterruptsDto interruptsDto)
         {
-            KeyValuePair<bool, string> validationResult = GetCreateValidationResult(systemTableDto);
+            KeyValuePair<bool, string> validationResult = GetCreateValidationResult(interruptsDto);
             if (validationResult.Key)
             {
-                //mapper
-                var systemTable = new SystemTable();
-                var result = SystemTableRepository.Create(systemTable);
+                var interrupt = new Mapper(InterruptsDtoToInterruptsConfig).Map<Interrupt>(interruptsDto); ;
+                var result = InterruptsRepository.Create(interrupt);
                 return result;
             }
         }
@@ -28,22 +28,22 @@ namespace BusinessLayer
             throw new NotImplementedException();
         }
 
-        public IList<SystemTableDto> GetAll()
+        public IList<InterruptsDto> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public SystemTableDto GetById(int id)
+        public InterruptsDto GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IList<SystemTableDto> GetByStats(string stats)
+        public IList<InterruptsDto> GetByStats(string stats)
         {
             throw new NotImplementedException();
         }
 
-        public KeyValuePair<bool, string> Update(SystemTableDto systemTableDto)
+        public KeyValuePair<bool, string> Update(InterruptsDto interruptsTableDto)
         {
             throw new NotImplementedException();
         }

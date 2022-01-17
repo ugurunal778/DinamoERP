@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,10 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseBusinessLayer.cs" />
-    <Compile Include="Interfaces\ISystemTableBusinessLayer.cs" />
+    <Compile Include="Interfaces\IInterruptsBusinessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataClass\SystemTableBusinessLayer.cs" />
-    <Compile Include="DataClass\SystemTableValidationLayer.cs" />
+    <Compile Include="DataClass\InterruptsBusinessLayer.cs" />
+    <Compile Include="DataClass\InterruptsValidationLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
@@ -56,6 +59,9 @@
       <Project>{57c1362f-324f-49e7-a12a-a7f8089781dd}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
